@@ -1,0 +1,100 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+
+/* Encabezado e ícono */
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+img {
+  max-width: 30px;
+  height: auto;
+}
+
+/* Botón de exportación CSV */
+#btn-export {
+  margin-left: auto;
+  background-color: #107c41;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#btn-export:hover {
+  background-color: #0b5a2f;
+}
+
+/* Contenedor de la tabla */
+.spreadsheet-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Estilos de la tabla/cuadrícula */
+table {
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  width: 80px;
+  height: 25px;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+}
+
+th {
+  background-color: #f0f0f0;
+  user-select: none;
+}
+
+th.col-header {
+  cursor: pointer;
+}
+
+th.col-header:hover {
+  background-color: #e0e0e0;
+}
+
+/* Inputs de las celdas */
+td input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/* Estados de selección */
+td.selected {
+  outline: 2px solid #107c41;
+  outline-offset: -2px;
+  background-color: #e8f5e9 !important;
+}
+
+td.column-selected {
+  background-color: #e8f5e9;
+}
+
+/* Formatos condicionales para errores */
+td input.has-error {
+  color: #d32f2f;
+  font-weight: bold;
+}
